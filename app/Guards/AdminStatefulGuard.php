@@ -1,6 +1,5 @@
 <?php
 
-// namespace Illuminate\Contracts\Auth;
 namespace App\Guards;
 
 /////     Copied Statefulguard fully and paste it here     /////
