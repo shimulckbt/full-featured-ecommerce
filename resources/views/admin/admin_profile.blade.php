@@ -27,7 +27,7 @@
                      <!-- /.description-block -->
                   </div>
                   <!-- /.col -->
-                  <div class="col-sm-4 br-1 bl-1">
+                  <div class="col-sm-4">
                      <div class="description-block">
                         <h5 class="description-header">550</h5>
                         <span class="description-text">FOLLOWERS</span>

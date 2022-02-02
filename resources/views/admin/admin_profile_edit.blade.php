@@ -18,14 +18,14 @@
          <div class="box-body">
             <div class="row">
                <div class="col">
-                  <form novalidate="">
+                  <form method="post" action="{{route('admin.profile.update')}}" enctype="multipart/form-data">
+                     @csrf
                      <div class="row">
                         <div class="col-12">
-
                            <div class="row">
                               <div class="col-md-6">
                                  <div class="form-group">
-                                    <h5>Email Field <span class="text-danger">*</span></h5>
+                                    <h5>Admin Name <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <input type="text" name="name" class="form-control" required value="{{$editData->name}}">
                                        <div class="help-block"></div>
@@ -60,8 +60,8 @@
                                  </div>
                               </div>
 
-                              <div class="col-md-5">
-                                 <img id="showImage" style="width: 100px;height: 100px;" src=" {{(!empty($adminData->profile_photo_path))?url('upload/admin_images/'.$adminData->profile_photo_path):url('upload/no_image.jpg')}}" alt="User Avater">
+                              <div class="col-md-6">
+                                 <img id="showImage" style="width: 100px;height: 100px;" src="{{(!empty($editData->profile_photo_path))?url('upload/admin_images/'.$editData->profile_photo_path):url('upload/no_image.jpg')}}" alt="User Avater">
                               </div>
 
                            </div>
