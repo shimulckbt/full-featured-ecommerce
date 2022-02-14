@@ -102,14 +102,6 @@
                <li><a href="card_color.html"><i class="ti-more"></i>Cards Color</a></li>
             </ul>
          </li>
-
-         <li>
-            <a href="auth_login.html">
-               <i data-feather="lock"></i>
-               <span>Log Out</span>
-            </a>
-         </li>
-
       </ul>
    </section>
 

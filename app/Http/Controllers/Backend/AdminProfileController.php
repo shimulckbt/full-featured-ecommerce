@@ -74,4 +74,10 @@ class AdminProfileController extends Controller
             return redirect()->back();
         }
     }
+
+    // public function adminData()
+    // {
+    //     $admins = Admin::findOrFail(4);
+    //     return view('admin.body.header', compact('admins'));
+    // }
 }

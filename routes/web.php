@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/////          Admin Related Route          /////
+
 Route::group(['prefix' => 'admin', 'middleware' => ['admin:admin']], function () {
     Route::get('/login', [AdminController::class, 'loginForm']);
     Route::post('/login', [AdminController::class, 'store'])->name('admin.login');
@@ -28,7 +30,6 @@ Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', f
     return view('admin.index');
 })->name('dashboard');
 
-/////          Admin Related Route          /////
 
 Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.logout');
 Route::get('/admin/profile', [AdminProfileController::class, 'adminProfile'])->name('admin.profile');
@@ -38,8 +39,10 @@ Route::get('/admin/change/password', [AdminProfileController::class, 'adminChang
 Route::post('/admin/update/password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.update.password');
 
 
-/////          User Auth          /////
+/////          User All Route          /////
 
 Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/', [IndexController::class, 'index']);
