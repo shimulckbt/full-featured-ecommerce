@@ -28,11 +28,17 @@
                      <div class="form-group">
                         <label class="info-title" for="oldpassword">Curent Password<span class="text-danger">*</span></label>
                         <input type="password" name="oldpassword" class="form-control" id="oldpassword">
+                        @error('oldpassword')
+                        <span class="invalid-feedback" role="alert"><strong class="text-danger">{{$message}}</strong></span>
+                        @enderror
                      </div>
 
                      <div class="form-group">
                         <label class="info-title" for="password">New Password<span class="text-danger">*</span></label>
                         <input type="password" name="password" class="form-control" id="password">
+                        @error('password')
+                        <span class="invalid-feedback" role="alert"><strong class="text-danger">{{$message}}</strong></span>
+                        @enderror
                      </div>
 
                      <div class="form-group">
