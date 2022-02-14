@@ -18,31 +18,26 @@
          <div class="col-md-2"></div>
          <div class="col-md-6">
             <div class="card">
-               <h3 class="text-center"><span class="text-danger">Hi.....</span><strong>{{Auth::user()->name}}</strong> Update yur profile...</h3>
+               <h3 class="text-center"><span class="text-primary">Change Password</span></h3>
 
 
                <div class="card-body">
-                  <form action="{{route('user.profile.update')}}" method="post" enctype="multipart/form-data">
+                  <form action="{{route('user.password.update')}}" method="post">
                      @csrf
 
                      <div class="form-group">
-                        <label class="info-title" for="name">Your Name<span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control" id="name" value="{{$user->name}}">
+                        <label class="info-title" for="oldpassword">Curent Password<span class="text-danger">*</span></label>
+                        <input type="password" name="oldpassword" class="form-control" id="oldpassword">
                      </div>
 
                      <div class="form-group">
-                        <label class="info-title" for="email">Your Email<span class="text-danger">*</span></label>
-                        <input type="email" name="email" class="form-control" id="email" value="{{$user->email}}">
+                        <label class="info-title" for="password">New Password<span class="text-danger">*</span></label>
+                        <input type="password" name="password" class="form-control" id="password">
                      </div>
 
                      <div class="form-group">
-                        <label class="info-title" for="phone">Your Phone Number<span class="text-danger">*</span></label>
-                        <input type="text" name="phone" class="form-control" id="phone" value="{{$user->phone}}">
-                     </div>
-
-                     <div class="form-group">
-                        <label class="info-title" for="profile_photo_path">Upload photo<span class="text-danger">*</span></label>
-                        <input type="file" name="profile_photo_path" class="form-control" id="profile_photo_path">
+                        <label class="info-title" for="password_confirmation">Confirm New Password<span class="text-danger">*</span></label>
+                        <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
                      </div>
 
                      <div class="form-group">

@@ -65,15 +65,31 @@
       var type = "{{Session::get('alert-type','info')}}"
       switch (type) {
          case 'info':
+            toastr.options = {
+               "closeButton": true,
+               "progressBar": true
+            }
             toastr.info("{{Session::get('message')}}");
             break;
          case 'success':
+            toastr.options = {
+               "closeButton": true,
+               "progressBar": true
+            }
             toastr.success("{{Session::get('message')}}");
             break;
          case 'warning':
+            toastr.options = {
+               "closeButton": true,
+               "progressBar": true
+            }
             toastr.warning("{{Session::get('message')}}");
             break;
          case 'error':
+            toastr.options = {
+               "closeButton": true,
+               "progressBar": true
+            }
             toastr.error("{{Session::get('message')}}");
             break;
       }

@@ -63,5 +63,7 @@ Route::group(
         Route::get('/logout', [IndexController::class, 'userLogout'])->name('user.logout');
         Route::get('/profile', [IndexController::class, 'userProfile'])->name('user.profile');
         Route::post('/profile/update', [IndexController::class, 'userProfileUpdate'])->name('user.profile.update');
+        Route::get('/change-password', [IndexController::class, 'userPChangePassword'])->name('change.password');
+        Route::post('/password/update', [IndexController::class, 'userPasswordUpdate'])->name('user.password.update');
     }
 );
