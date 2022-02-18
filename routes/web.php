@@ -48,10 +48,20 @@ Route::group(
 
         Route::group(['prefix' => '/brand'], function () {
             Route::get('/show-all', [BrandController::class, 'showAllbrand'])->name('all.brand');
-            Route::post('/brand-create', [BrandController::class, 'createBrand'])->name('brand.create');
+            Route::post('/create-brand', [BrandController::class, 'createBrand'])->name('brand.create');
+            Route::get('/edit-brand/{id}', [BrandController::class, 'editBrand'])->name('edit.brand');
+            Route::post('/update-brand/{id}', [BrandController::class, 'updateBrand'])->name('update.brand');
         });
     }
 );
+
+
+
+
+
+
+
+
 
 
 /////          User All Route          /////

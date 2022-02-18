@@ -34,8 +34,8 @@
                               <td>{{$brand->brand_name_bn}}</td>
                               <td><img src="{{asset($brand->brand_image)}}" style="height: 40px; width:70;" alt="no image"></td>
                               <td>
-                                 <a href="" class="btn btn-info"></a>
-                                 <a href="" class="btn btn-danger"></a>
+                                 <a href="{{route('edit.brand',$brand->id)}}" class="btn btn-info btn-sm"><i class="far fa-pen"></i>Edit</a>
+                                 <a href="" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i>Delete</a>
                               </td>
                            </tr>
                            @endforeach
@@ -65,6 +65,9 @@
                            <h5>Brand Name in English <span class="text-danger">*</span></h5>
                            <div class="controls">
                               <input type="brand_name_en" id="brand_name_en" name="brand_name_en" class="form-control" required>
+                              @error('brand_name_en')
+                              <span class="text-danger">{{$message}}</span>
+                              @enderror
                            </div>
                         </div>
 
@@ -72,6 +75,9 @@
                            <h5>Brand Name in Mother Language <span class="text-danger">*</span></h5>
                            <div class="controls">
                               <input type="brand_name_bn" id="brand_name_bn" name="brand_name_bn" class="form-control" required>
+                              @error('brand_name_bn')
+                              <span class="text-danger">{{$message}}</span>
+                              @enderror
                            </div>
                         </div>
 
@@ -79,10 +85,13 @@
                            <h5>Brand Image <span class="text-danger">*</span></h5>
                            <div class="controls">
                               <input type="file" id="brand_image" name="brand_image" class="form-control" required>
+                              @error('brand_image')
+                              <span class="text-danger">{{$message}}</span>
+                              @enderror
                            </div>
                         </div>
                         <div class=" text-xs-right">
-                           <input type="submit" class="btn btn-rounded btn-info btn-md" value="Update">
+                           <input type="submit" class="btn btn-rounded btn-info btn-md" value="Add New">
                         </div>
                      </form>
                   </div>
