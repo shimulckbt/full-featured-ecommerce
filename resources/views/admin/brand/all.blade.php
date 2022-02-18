@@ -35,7 +35,7 @@
                               <td><img src="{{asset($brand->brand_image)}}" style="height: 40px; width:70;" alt="no image"></td>
                               <td>
                                  <a href="{{route('edit.brand',$brand->id)}}" class="btn btn-info btn-sm"><i class="far fa-pen"></i>Edit</a>
-                                 <a href="" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i>Delete</a>
+                                 <a href="{{route('delete.brand',$brand->id)}}" id="delete" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i>Delete</a>
                               </td>
                            </tr>
                            @endforeach

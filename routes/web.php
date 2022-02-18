@@ -51,6 +51,7 @@ Route::group(
             Route::post('/create-brand', [BrandController::class, 'createBrand'])->name('brand.create');
             Route::get('/edit-brand/{id}', [BrandController::class, 'editBrand'])->name('edit.brand');
             Route::post('/update-brand/{id}', [BrandController::class, 'updateBrand'])->name('update.brand');
+            Route::get('/delete-brand/{id}', [BrandController::class, 'deleteBrand'])->name('delete.brand');
         });
     }
 );
