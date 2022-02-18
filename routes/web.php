@@ -41,13 +41,14 @@ Route::group(
         Route::get('/profile', [AdminProfileController::class, 'adminProfile'])->name('admin.profile');
         Route::get('/profile/edit', [AdminProfileController::class, 'adminProfileEdit'])->name('admin.profile.edit');
         Route::post('/profile/update', [AdminProfileController::class, 'adminProfileUpdate'])->name('admin.profile.update');
-        Route::get('/change/password', [AdminProfileController::class, 'adminChangePassword'])->name('admin.change.password');
-        Route::post('/update/password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.update.password');
+        Route::get('/change-password', [AdminProfileController::class, 'adminChangePassword'])->name('admin.change.password');
+        Route::post('/update-password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.update.password');
 
         ///////       Brand relatefd route        ///////
 
         Route::group(['prefix' => '/brand'], function () {
             Route::get('/show-all', [BrandController::class, 'showAllbrand'])->name('all.brand');
+            Route::post('/brand-create', [BrandController::class, 'createBrand'])->name('brand.create');
         });
     }
 );

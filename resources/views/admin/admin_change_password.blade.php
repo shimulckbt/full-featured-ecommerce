@@ -16,53 +16,47 @@
          </div>
          <!-- /.box-header -->
          <div class="box-body">
-            <div class="row">
-               <div class="col">
-                  <form method="post" action="{{route('admin.update.password')}}">
-                     @csrf
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <h5>Current Password <span class="text-danger">*</span></h5>
-                                    <div class="controls">
-                                       <input type="password" id="oldpassword" name="oldpassword" class="form-control" required>
-                                       <div class="help-block"></div>
-                                    </div>
-                                    <div class="form-control-feedback">
-                                    </div>
-                                 </div>
+            <form method="post" action="{{route('admin.update.password')}}">
+               @csrf
+               <div class="row">
+                  <div class="col-6">
+                     <div class="form-group">
+                        <h5>Current Password <span class="text-danger">*</span></h5>
+                        <div class="controls">
+                           <input type="password" id="oldpassword" name="oldpassword" class="form-control" required>
+                           <div class="help-block"></div>
+                        </div>
+                        <div class="form-control-feedback">
+                        </div>
+                     </div>
 
-                                 <div class="form-group">
-                                    <h5>New Password <span class="text-danger">*</span></h5>
-                                    <div class="controls">
-                                       <input type="password" id="password" name="password" class="form-control" required>
-                                       <div class="help-block"></div>
-                                    </div>
-                                    <div class="form-control-feedback">
-                                    </div>
-                                 </div>
+                     <div class="form-group">
+                        <h5>New Password <span class="text-danger">*</span></h5>
+                        <div class="controls">
+                           <input type="password" id="password" name="password" class="form-control" required>
+                           <div class="help-block"></div>
+                        </div>
+                        <div class="form-control-feedback">
+                        </div>
+                     </div>
 
-                                 <div class="form-group">
-                                    <h5>Confirm Password <span class="text-danger">*</span></h5>
-                                    <div class="controls">
-                                       <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
-                                       <div class="help-block"></div>
-                                    </div>
-                                    <div class="form-control-feedback">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class=" text-xs-right">
-                              <input type="submit" class="btn btn-rounded btn-info" value="Update">
-                           </div>
-                  </form>
+                     <div class="form-group">
+                        <h5>Confirm Password <span class="text-danger">*</span></h5>
+                        <div class="controls">
+                           <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
+                           <div class="help-block"></div>
+                        </div>
+                        <div class="form-control-feedback">
+                        </div>
+                     </div>
+                  </div>
 
                </div>
-               <!-- /.col -->
-            </div>
+               <div class=" text-xs-right">
+                  <input type="submit" class="btn btn-rounded btn-info" value="Update">
+               </div>
+            </form>
+            <!-- /.col -->
             <!-- /.row -->
          </div>
          <!-- /.box-body -->
