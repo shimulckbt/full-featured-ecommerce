@@ -34,8 +34,8 @@
                               <td>{{$brand->brand_name_bn}}</td>
                               <td><img src="{{asset($brand->brand_image)}}" style="height: 40px; width:70;" alt="no image"></td>
                               <td>
-                                 <a href="{{route('edit.brand',$brand->id)}}" class="btn btn-info btn-sm"><i class="far fa-pen"></i>Edit</a>
-                                 <a href="{{route('delete.brand',$brand->id)}}" id="delete" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i>Delete</a>
+                                 <a href="{{route('edit.brand',$brand->id)}}" class="btn btn-info btn-md" title="Edit Data"><i class="fa fa-pencil"></i></a>
+                                 <a href="{{route('delete.brand',$brand->id)}}" class="btn btn-danger btn-md" title="Delete Data" id="delete"><i class="fa fa-trash-o"></i></a>
                               </td>
                            </tr>
                            @endforeach
