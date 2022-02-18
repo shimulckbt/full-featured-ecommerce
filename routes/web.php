@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
+use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\User;
 
@@ -42,6 +43,12 @@ Route::group(
         Route::post('/profile/update', [AdminProfileController::class, 'adminProfileUpdate'])->name('admin.profile.update');
         Route::get('/change/password', [AdminProfileController::class, 'adminChangePassword'])->name('admin.change.password');
         Route::post('/update/password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.update.password');
+
+        ///////       Brand relatefd route        ///////
+
+        Route::group(['prefix' => '/brand'], function () {
+            Route::get('/show-all', [BrandController::class, 'showAllbrand'])->name('all.brand');
+        });
     }
 );
 
