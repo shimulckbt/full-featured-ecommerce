@@ -66,18 +66,16 @@ Route::group(
             Route::get('/edit-category/{id}', [CategoryController::class, 'editCategory'])->name('edit.category');
             Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('update.category');
             Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
-        });
 
-        ///////       Category related route ended        ///////
+            ///////       SubCategory related route        ///////
 
-        ///////       Category related route        ///////
+            Route::get('/all-subcategory', [SubCategoryController::class, 'allSubCategory'])->name('all.subcategory');
+            Route::post('/create-subcategory', [SubCategoryController::class, 'createSubCategory'])->name('create.subcategory');
+            Route::get('/edit-subcategory/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.subcategory');
+            Route::post('/update-subcategory/{id}', [SubCategoryController::class, 'updateSubCategory'])->name('update.subcategory');
+            Route::get('/delete-subcategory/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.subcategory');
 
-        Route::group(['prefix' => '/subcategory'], function () {
-            Route::get('/all-subcategory', [SubCategoryController::class, 'allSubCategory'])->name('all.category');
-            Route::post('/create-subcategory', [SubCategoryController::class, 'createSubCategory'])->name('create.category');
-            Route::get('/edit-subcategory/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.category');
-            Route::post('/update-subcategory/{id}', [SubCategoryController::class, 'updateSubCategory'])->name('update.category');
-            Route::get('/delete-subcategory/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.category');
+            ///////       SubCategory related route ended        ///////
         });
 
         ///////       Category related route ended        ///////
