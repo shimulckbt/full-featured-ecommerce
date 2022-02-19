@@ -72,12 +72,12 @@ Route::group(
 
         ///////       Category related route        ///////
 
-        Route::group(['prefix' => '/category'], function () {
-            Route::get('/all-category', [SubCategoryController::class, 'allSubCategory'])->name('all.category');
-            Route::post('/create-category', [SubCategoryController::class, 'createSubCategory'])->name('create.category');
-            Route::get('/edit-category/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.category');
-            Route::post('/update-category/{id}', [SubCategoryController::class, 'updateSubCategory'])->name('update.category');
-            Route::get('/delete-category/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.category');
+        Route::group(['prefix' => '/subcategory'], function () {
+            Route::get('/all-subcategory', [SubCategoryController::class, 'allSubCategory'])->name('all.category');
+            Route::post('/create-subcategory', [SubCategoryController::class, 'createSubCategory'])->name('create.category');
+            Route::get('/edit-subcategory/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.category');
+            Route::post('/update-subcategory/{id}', [SubCategoryController::class, 'updateSubCategory'])->name('update.category');
+            Route::get('/delete-subcategory/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.category');
         });
 
         ///////       Category related route ended        ///////
