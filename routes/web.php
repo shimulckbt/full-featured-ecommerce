@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\User;
 
@@ -68,8 +69,23 @@ Route::group(
         });
 
         ///////       Category related route ended        ///////
+
+        ///////       Category related route        ///////
+
+        Route::group(['prefix' => '/category'], function () {
+            Route::get('/all-category', [SubCategoryController::class, 'allSubCategory'])->name('all.category');
+            Route::post('/create-category', [SubCategoryController::class, 'createSubCategory'])->name('create.category');
+            Route::get('/edit-category/{id}', [SubCategoryController::class, 'editSubCategory'])->name('edit.category');
+            Route::post('/update-category/{id}', [SubCategoryController::class, 'updateSubCategory'])->name('update.category');
+            Route::get('/delete-category/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.category');
+        });
+
+        ///////       Category related route ended        ///////
     }
 );
+
+
+
 
 
 
