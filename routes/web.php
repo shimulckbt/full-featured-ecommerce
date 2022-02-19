@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\User;
 
@@ -44,15 +45,29 @@ Route::group(
         Route::get('/change-password', [AdminProfileController::class, 'adminChangePassword'])->name('admin.change.password');
         Route::post('/update-password', [AdminProfileController::class, 'adminUpdatePassword'])->name('admin.update.password');
 
-        ///////       Brand relatefd route        ///////
+        ///////       Brand related route        ///////
 
         Route::group(['prefix' => '/brand'], function () {
-            Route::get('/show-all', [BrandController::class, 'showAllbrand'])->name('all.brand');
+            Route::get('/all-brand', [BrandController::class, 'showAllBrand'])->name('all.brand');
             Route::post('/create-brand', [BrandController::class, 'createBrand'])->name('brand.create');
             Route::get('/edit-brand/{id}', [BrandController::class, 'editBrand'])->name('edit.brand');
             Route::post('/update-brand/{id}', [BrandController::class, 'updateBrand'])->name('update.brand');
             Route::get('/delete-brand/{id}', [BrandController::class, 'deleteBrand'])->name('delete.brand');
         });
+
+        ///////       Brand related route ended        ///////
+
+        ///////       Category related route        ///////
+
+        Route::group(['prefix' => '/category'], function () {
+            Route::get('/all-category', [CategoryController::class, 'allCategory'])->name('all.category');
+            Route::post('/create-category', [CategoryController::class, 'createCategory'])->name('create.category');
+            Route::get('/edit-category/{id}', [CategoryController::class, 'editCategory'])->name('edit.category');
+            Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('update.category');
+            Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete.category');
+        });
+
+        ///////       Category related route ended        ///////
     }
 );
 

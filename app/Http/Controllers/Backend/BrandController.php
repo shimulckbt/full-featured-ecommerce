@@ -9,7 +9,7 @@ use Image;
 
 class BrandController extends Controller
 {
-    public function showAllbrand()
+    public function showAllBrand()
     {
         $brands = Brand::latest()->get();
         return view('admin.brand.all', compact('brands'));
