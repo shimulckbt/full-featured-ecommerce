@@ -21,7 +21,7 @@
                         <div class="form-group">
                            <h5>Brand Name in English <span class="text-danger">*</span></h5>
                            <div class="controls">
-                              <input type="brand_name_en" id="brand_name_en" name="brand_name_en" class="form-control" value="{{$brand->brand_name_en}}">
+                              <input type="text" id="brand_name_en" name="brand_name_en" class="form-control" value="{{$brand->brand_name_en}}">
                               @error('brand_name_en')
                               <span class="text-danger">{{$message}}</span>
                               @enderror
@@ -31,7 +31,7 @@
                         <div class="form-group">
                            <h5>Brand Name in Mother Language <span class="text-danger">*</span></h5>
                            <div class="controls">
-                              <input type="brand_name_bn" id="brand_name_bn" name="brand_name_bn" class="form-control" value="{{$brand->brand_name_bn}}">
+                              <input type="text" id="brand_name_bn" name="brand_name_bn" class="form-control" value="{{$brand->brand_name_bn}}">
                               @error('brand_name_bn')
                               <span class="text-danger">{{$message}}</span>
                               @enderror

@@ -18,11 +18,11 @@
                      <table id="example1" class="table table-bordered table-striped">
                         <thead>
                            <tr>
-                              <th>SL</th>
-                              <th>Category</th>
-                              <th>Subcategory En</th>
-                              <th>Subcategory Bn</th>
-                              <th>Action</th>
+                              <th Width="5%">SL</th>
+                              <th Width="15%">Category</th>
+                              <th Width="15%">Subcategory En</th>
+                              <th Width="15%">Subcategory Bn</th>
+                              <th Width="20%">Action</th>
                            </tr>
                         </thead>
                         <tbody>

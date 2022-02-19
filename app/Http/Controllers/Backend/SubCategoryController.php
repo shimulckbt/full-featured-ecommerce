@@ -24,13 +24,16 @@ class SubCategoryController extends Controller
             'subcategory_name_bn' => 'required',
         ]);
 
+        // $num = uniqid(3);
+        $num = random_int(0, 100);
+
         SubCategory::Insert(
             [
                 'category_id' => $request->category_id,
                 'subcategory_name_en' => $request->subcategory_name_en,
                 'subcategory_name_bn' => $request->subcategory_name_bn,
-                'subcategory_slug_en' => strtolower(str_replace(' ', '-', $request->subcategory_name_en)),
-                'subcategory_slug_bn' => str_replace(' ', '-', $request->subcategory_name_bn),
+                'subcategory_slug_en' => strtolower(str_replace(' ', '-', $request->subcategory_name_en)) . '-' . $num,
+                'subcategory_slug_bn' => str_replace(' ', '-', $request->subcategory_name_bn) . '-' . $num,
             ]
         );
 
@@ -43,33 +46,24 @@ class SubCategoryController extends Controller
 
     public function editSubCategory($id)
     {
-        $category = Category::findOrFail($id);
         $categories = Category::orderBy('category_name_en', 'ASC')->get();
-
-        // $category = Category::findOrFail($id);
-        // $category_id = $category->id;
-        // $categoriesa = Category::orderBy('category_name_en', 'ASC')->get();
-        // if (($key = array_search($id, $categories)) !== false) {
-        //     unset($categories[$key]);
-        // }
-
-        // $categories = array_diff_key(
-        //     $categoriesa,
-        //     array_flip((array) [$category_id])
-        // );
         $subcategory = SubCategory::findOrFail($id);
-        return view('admin.subcategory.edit', compact('subcategory', 'categories', 'category'));
+        // $category_id = $subcategory->category_id;
+        // $category = Category::findOrFail($category_id);
+        return view('admin.subcategory.edit', compact('subcategory', 'categories'));
     }
 
     public function updateSubCategory(Request $request, $id)
     {
+        // $num = uniqid(3);
+        $num = random_int(0, 100);
         SubCategory::findOrFail($id)->update(
             [
                 'category_id' => $request->category_id,
                 'subcategory_name_en' => $request->subcategory_name_en,
                 'subcategory_name_bn' => $request->subcategory_name_bn,
-                'subcategory_slug_en' => strtolower(str_replace(' ', '-', $request->subcategory_name_en)),
-                'subcategory_slug_bn' => str_replace(' ', '-', $request->subcategory_name_bn),
+                'subcategory_slug_en' => strtolower(str_replace(' ', '-', $request->subcategory_name_en)) . '-' . $num,
+                'subcategory_slug_bn' => str_replace(' ', '-', $request->subcategory_name_bn) . '-' . $num,
             ]
         );
 

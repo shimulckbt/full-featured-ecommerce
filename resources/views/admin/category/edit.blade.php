@@ -21,7 +21,7 @@
                         <div class="form-group">
                            <h5>Category Name in English <span class="text-danger">*</span></h5>
                            <div class="controls">
-                              <input type="category_name_en" id="category_name_en" name="category_name_en" class="form-control" value="{{$category->category_name_en}}">
+                              <input type="text" id="category_name_en" name="category_name_en" class="form-control" value="{{$category->category_name_en}}">
                               @error('category_name_en')
                               <span class="text-danger">{{$message}}</span>
                               @enderror
@@ -31,7 +31,7 @@
                         <div class="form-group">
                            <h5>Category Name in Mother Language <span class="text-danger">*</span></h5>
                            <div class="controls">
-                              <input type="category_name_bn" id="category_name_bn" name="category_name_bn" class="form-control" value="{{$category->category_name_bn}}">
+                              <input type="text" id="category_name_bn" name="category_name_bn" class="form-control" value="{{$category->category_name_bn}}">
                               @error('category_name_bn')
                               <span class="text-danger">{{$message}}</span>
                               @enderror

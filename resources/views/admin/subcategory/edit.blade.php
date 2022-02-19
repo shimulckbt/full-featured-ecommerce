@@ -22,9 +22,8 @@
                            <h5>Select Category <span class="text-danger">*</span></h5>
                            <div class="controls">
                               <select name="category_id" id="category_id" required="" class="form-control">
-                                 <option value="{{$category->id}}" selected>{{$category->category_name_en}}</option>
                                  @foreach($categories as $category)
-                                 <option value="{{$category->id}}">{{$category->category_name_en}}</option>
+                                 <option value="{{$category->id}}" {{$category->id == $subcategory->category_id ? 'selected' : ''}}>{{$category->category_name_en}}</option>
                                  @endforeach
                               </select>
                               @error('category_id')
