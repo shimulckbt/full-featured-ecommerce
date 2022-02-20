@@ -97,6 +97,12 @@ class SubCategoryController extends Controller
         return view('admin.sub-subcategory.all', compact('subsubcategories', 'subcategories', 'categories'));
     }
 
+    public function getSubCategory($category_id)
+    {
+        $subcat = SubCategory::where('category_id', $category_id)->orderBy('subcategory_name_en', 'ASC')->get();
+        return json_encode($subcat);
+    }
+
     public function createSubSubCategory(Request $request)
     {
         $request->validate([

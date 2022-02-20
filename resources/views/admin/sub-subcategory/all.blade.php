@@ -2,6 +2,8 @@
 
 @section('main_content')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div class="container-full">
    <!-- Main content -->
    <section class="content">
@@ -21,8 +23,7 @@
                               <th Width="5%">SL</th>
                               <th Width="15%">Category</th>
                               <th Width="15%">Subcategory</th>
-                              <th Width="15%">Sub-Subcat En</th>
-                              <th Width="15%">Sub-Subcat Bn</th>
+                              <th Width="20%">Sub-Subcat En</th>
                               <th Width="25%">Action</th>
                            </tr>
                         </thead>
@@ -34,7 +35,6 @@
                               <td>{{$subsubcategory['category']['category_name_en']}}</td>
                               <td>{{$subsubcategory['subcategory']['subcategory_name_en']}}</td>
                               <td>{{$subsubcategory->sub_subcategory_name_en}}</td>
-                              <td>{{$subsubcategory->sub_subcategory_name_bn}}</td>
                               <td>
                                  <a href="{{route('edit.subsubcategory',$subsubcategory->id)}}" class="btn btn-info btn-md" title="Edit Data"><i class="fa fa-pencil"></i></a>
                                  <a href="{{route('delete.subsubcategory',$subsubcategory->id)}}" class="btn btn-danger btn-md" title="Delete Data" id="delete"><i class="fa fa-trash-o"></i></a>
@@ -84,9 +84,7 @@
                            <div class="controls">
                               <select name="subcategory_id" id="subcategory_id" required="" class="form-control">
                                  <option value="" selected disabled>Select SubCategory</option>
-                                 @foreach($subcategories as $subcategory)
-                                 <option value="{{$subcategory->id}}">{{$subcategory->subcategory_name_en}}</option>
-                                 @endforeach
+
                               </select>
                               @error('subcategory_id')
                               <span class="text-danger">{{$message}}</span>
@@ -131,5 +129,28 @@
    <!-- /.content -->
 
 </div>
+
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('select[name="category_id"]').on('change', function() {
+         var category_id = $(this).val();
+         if (category_id) {
+            $.ajax({
+               url: "{{url('/admin/category/subcategory/ajax')}}/" + category_id,
+               type: "GET",
+               dataType: "json",
+               success: function(data) {
+                  var d = $('select[name="subcategory_id"]').empty();
+                  $.each(data, function(key, value) {
+                     $('select[name="subcategory_id"]').append('<option value = "' + value.id + '">' + value.subcategory_name_en + '</option>');
+                  });
+               },
+            });
+         } else {
+            alert('danger');
+         }
+      });
+   });
+</script>
 
 @endsection
