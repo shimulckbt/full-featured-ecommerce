@@ -2,6 +2,8 @@
 
 @section('main_content')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div class="container-full">
    <!-- Main content -->
    <section class="content">
@@ -84,5 +86,28 @@
    <!-- /.content -->
 
 </div>
+
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('select[name="category_id"]').on('change', function() {
+         var category_id = $(this).val();
+         if (category_id) {
+            $.ajax({
+               url: "{{url('/admin/category/subcategory/ajax')}}/" + category_id,
+               type: "GET",
+               dataType: "json",
+               success: function(data) {
+                  var d = $('select[name="subcategory_id"]').empty();
+                  $.each(data, function(key, value) {
+                     $('select[name="subcategory_id"]').append('<option value = "' + value.id + '">' + value.subcategory_name_en + '</option>');
+                  });
+               },
+            });
+         } else {
+            alert('danger');
+         }
+      });
+   });
+</script>
 
 @endsection

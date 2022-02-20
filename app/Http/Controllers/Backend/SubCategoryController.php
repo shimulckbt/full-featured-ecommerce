@@ -133,10 +133,11 @@ class SubCategoryController extends Controller
         return redirect()->back()->with($notification);
     }
 
-    public function editSubSubCategory($id)
+    public function editSubSubCategory($category_id, $id)
     {
         $categories = Category::orderBy('category_name_en', 'ASC')->get();
-        $subcategories = SubCategory::orderBy('subcategory_name_en', 'ASC')->get();
+        // $subcategories = SubCategory::orderBy('subcategory_name_en', 'ASC')->get();
+        $subcategories = SubCategory::where('category_id', $category_id)->orderBy('subcategory_name_en', 'ASC')->get();
         $subsubcategory = SubSubCategory::findOrFail($id);
         // $category_id = $subcategory->category_id;
         // $category = Category::findOrFail($category_id);

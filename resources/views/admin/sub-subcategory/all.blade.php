@@ -36,7 +36,7 @@
                               <td>{{$subsubcategory['subcategory']['subcategory_name_en']}}</td>
                               <td>{{$subsubcategory->sub_subcategory_name_en}}</td>
                               <td>
-                                 <a href="{{route('edit.subsubcategory',$subsubcategory->id)}}" class="btn btn-info btn-md" title="Edit Data"><i class="fa fa-pencil"></i></a>
+                                 <a href="{{route('edit.subsubcategory',['category_id'=>$subsubcategory->category_id,'id'=>$subsubcategory->id])}}" class="btn btn-info btn-md" title="Edit Data"><i class="fa fa-pencil"></i></a>
                                  <a href="{{route('delete.subsubcategory',$subsubcategory->id)}}" class="btn btn-danger btn-md" title="Delete Data" id="delete"><i class="fa fa-trash-o"></i></a>
                               </td>
                            </tr>
