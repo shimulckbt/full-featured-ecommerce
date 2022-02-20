@@ -76,6 +76,16 @@ Route::group(
             Route::get('/delete-subcategory/{id}', [SubCategoryController::class, 'deleteSubCategory'])->name('delete.subcategory');
 
             ///////       SubCategory related route ended        ///////
+
+            ///////       SubSubCategory related route        ///////
+
+            Route::get('/all-subsubcategory', [SubCategoryController::class, 'allSubSubCategory'])->name('all.subsubcategory');
+            Route::post('/create-subsubcategory', [SubCategoryController::class, 'createSubSubCategory'])->name('create.subsubcategory');
+            Route::get('/edit-subsubcategory/{id}', [SubCategoryController::class, 'editSubSubCategory'])->name('edit.subsubcategory');
+            Route::post('/update-subsubcategory/{id}', [SubCategoryController::class, 'updateSubSubCategory'])->name('update.subsubcategory');
+            Route::get('/delete-subsubcategory/{id}', [SubCategoryController::class, 'deleteSubSubCategory'])->name('delete.subsubcategory');
+
+            ///////       SubSubCategory related route ended        ///////
         });
 
         ///////       Category related route ended        ///////
