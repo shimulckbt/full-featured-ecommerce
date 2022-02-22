@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Models\User;
 
@@ -95,7 +96,7 @@ Route::group(
 
         ///////       Products related route        ///////
         Route::group(['prefix' => '/product'], function () {
-            Route::get('/add-product', [SubCategoryController::class, 'addProduct'])->name('add.product');
+            Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add.product');
 
             // Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'getSubCategory']);
 
