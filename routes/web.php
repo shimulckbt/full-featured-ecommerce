@@ -97,6 +97,8 @@ Route::group(
         ///////       Products related route        ///////
         Route::group(['prefix' => '/product'], function () {
             Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add.product');
+            Route::get('/manage-product', [ProductController::class, 'manageProduct'])->name('manage.product');
+            Route::post('/create-product', [ProductController::class, 'createProduct'])->name('product.create');
 
             // Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'getSubCategory']);
 
