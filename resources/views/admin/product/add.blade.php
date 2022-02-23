@@ -30,7 +30,7 @@
                               <!-- start 1st row  -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Brand Select <span class="text-danger">*</span></h5>
+                                    <h5>Select Brand <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <select name="brand_id" class="form-control" required="">
                                           <option value="" selected="" disabled="">Select Brand</option>
@@ -46,7 +46,7 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Category Select <span class="text-danger">*</span></h5>
+                                    <h5>Select Category <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <select name="category_id" class="form-control" required="">
                                           <option value="" selected="" disabled="">Select Category</option>
@@ -102,10 +102,10 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Product Name Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Name Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="text" name="product_name_hin" class="form-control" required="">
-                                       @error('product_name_hin')
+                                       <input type="text" name="product_name_bn" class="form-control" required="">
+                                       @error('product_name_bn')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
                                     </div>
@@ -153,10 +153,10 @@
                               <!-- start 4th row  -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Product Tags Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Tags Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="text" name="product_tags_hin" class="form-control" value="Lorem,Ipsum,Amet" data-role="tagsinput" required="">
-                                       @error('product_tags_hin')
+                                       <input type="text" name="product_tags_bn" class="form-control" value="Lorem,Ipsum,Amet" data-role="tagsinput" required="">
+                                       @error('product_tags_bn')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
                                     </div>
@@ -175,10 +175,10 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Product Size Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Size Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="text" name="product_size_hin" class="form-control" value="Small,Midium,Large" data-role="tagsinput" required="">
-                                       @error('product_size_hin')
+                                       <input type="text" name="product_size_bn" class="form-control" value="Small,Midium,Large" data-role="tagsinput" required="">
+                                       @error('product_size_bn')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
                                     </div>
@@ -200,10 +200,10 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Product Color Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Color Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="text" name="product_color_hin" class="form-control" value="red,Black,Large" data-role="tagsinput" required="">
-                                       @error('product_color_hin')
+                                       <input type="text" name="product_color_bn" class="form-control" value="red,Black,Large" data-role="tagsinput" required="">
+                                       @error('product_color_bn')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
                                     </div>
@@ -238,8 +238,8 @@
                                  <div class="form-group">
                                     <h5>Main Thumbnail <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)" required="">
-                                       @error('product_thambnail')
+                                       <input type="file" name="product_thumbnail" class="form-control" onChange="mainThamUrl(this)" required="">
+                                       @error('product_thumbnail')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
                                        <img src="" id="mainThmb">
@@ -271,9 +271,9 @@
                               </div> <!-- end col md 6 -->
                               <div class="col-md-6">
                                  <div class="form-group">
-                                    <h5>Short Description Hindi <span class="text-danger">*</span></h5>
+                                    <h5>Short Description Bndi <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea name="short_descp_hin" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
+                                       <textarea name="short_descp_bn" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
@@ -290,9 +290,9 @@
                               </div> <!-- end col md 6 -->
                               <div class="col-md-6">
                                  <div class="form-group">
-                                    <h5>Long Description Hindi <span class="text-danger">*</span></h5>
+                                    <h5>Long Description Bndi <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea id="editor2" name="long_descp_hin" rows="10" cols="80">Long Description Hindi</textarea>
+                                       <textarea id="editor2" name="long_descp_bn" rows="10" cols="80">Long Description Bndi</textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
