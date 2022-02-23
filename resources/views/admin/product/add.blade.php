@@ -62,7 +62,7 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>SubCategory Select <span class="text-danger">*</span></h5>
+                                    <h5>Select SubCategory <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <select name="subcategory_id" class="form-control" required="">
                                           <option value="" selected="" disabled="">Select SubCategory</option>

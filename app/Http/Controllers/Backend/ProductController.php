@@ -24,6 +24,7 @@ class ProductController extends Controller
 
     public function createProduct(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'file' => 'required|mimes:jpeg,png,jpg,zip,pdf|max:2048',
         ]);
@@ -79,6 +80,8 @@ class ProductController extends Controller
             'created_at' => Carbon::now(),
 
         ]);
+        // $prod = Product::find('category_id');
+        // dd($prod);
 
 
         ////////// Multiple Image Upload Start ///////////
@@ -98,7 +101,7 @@ class ProductController extends Controller
             ]);
         }
 
-        ////////// Een Multiple Image Upload Start ///////////
+        ////////// Multiple Image Upload End ///////////
 
 
         $notification = array(
