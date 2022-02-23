@@ -236,7 +236,7 @@
                               </div> <!-- end col md 4 -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>Main Thambnail <span class="text-danger">*</span></h5>
+                                    <h5>Main Thumbnail <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)" required="">
                                        @error('product_thambnail')
