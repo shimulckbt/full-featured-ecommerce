@@ -59,6 +59,10 @@
    <script src="{{asset('backend/js/pages/data-table.js')}}"></script>
    <!-- datatable -->
 
+   <!-- Input Tags -->
+   <script src="{{ asset('../assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js') }}"></script>
+   <!-- Input Tags -->
+
    <!-- Shimul Admin App -->
    <script src="{{asset('backend/js/template.js')}}"></script>
    <script src="{{asset('backend/js/pages/dashboard.js')}}"></script>
