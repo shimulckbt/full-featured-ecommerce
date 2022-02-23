@@ -78,7 +78,7 @@
                               <!-- start 2nd row  -->
                               <div class="col-md-4">
                                  <div class="form-group">
-                                    <h5>SubSubCategory Select <span class="text-danger">*</span></h5>
+                                    <h5>Select SubSubCategory <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                        <select name="subsubcategory_id" class="form-control" required="">
                                           <option value="" selected="" disabled="">Select SubSubCategory</option>
@@ -238,7 +238,7 @@
                                  <div class="form-group">
                                     <h5>Main Thumbnail <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <input type="file" name="product_thumbnail" class="form-control" onChange="mainThamUrl(this)" required="">
+                                       <input type="file" name="product_thumbnail" class="form-control" onChange="mainThumUrl(this)" required="">
                                        @error('product_thumbnail')
                                        <span class="text-danger">{{ $message }}</span>
                                        @enderror
@@ -352,9 +352,10 @@
    </section>
    <!-- /.content -->
 </div>
+
 <script type="text/javascript">
    $(document).ready(function() {
-      $('select[name="category_id"]').on('click', function() {
+      $('select[name="category_id"]').on('change', function() {
          var category_id = $(this).val();
          if (category_id) {
             $.ajax({
@@ -370,7 +371,7 @@
                },
             });
          } else {
-            alert('danger');
+            alert('Select');
          }
       });
       $('select[name="subcategory_id"]').on('click', function() {
@@ -388,13 +389,13 @@
                },
             });
          } else {
-            alert('danger');
+            alert('Select');
          }
       });
    });
 </script>
 <script type="text/javascript">
-   function mainThamUrl(input) {
+   function mainThumUrl(input) {
       if (input.files && input.files[0]) {
          var reader = new FileReader();
          reader.onload = function(e) {
