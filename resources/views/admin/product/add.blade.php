@@ -265,15 +265,15 @@
                                  <div class="form-group">
                                     <h5>Short Description English <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea name="short_descp_en" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
+                                       <textarea name="short_desc_en" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
                               <div class="col-md-6">
                                  <div class="form-group">
-                                    <h5>Short Description Bndi <span class="text-danger">*</span></h5>
+                                    <h5>Short Description Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea name="short_descp_bn" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
+                                       <textarea name="short_desc_bn" id="textarea" class="form-control" required placeholder="Textarea text"></textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
@@ -284,15 +284,15 @@
                                  <div class="form-group">
                                     <h5>Long Description English <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea id="editor1" name="long_descp_en" rows="10" cols="80" required="">Long Description English</textarea>
+                                       <textarea id="editor1" name="long_desc_en" rows="10" cols="80" required="">Long Description English</textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
                               <div class="col-md-6">
                                  <div class="form-group">
-                                    <h5>Long Description Bndi <span class="text-danger">*</span></h5>
+                                    <h5>Long Description Bn <span class="text-danger">*</span></h5>
                                     <div class="controls">
-                                       <textarea id="editor2" name="long_descp_bn" rows="10" cols="80">Long Description Bndi</textarea>
+                                       <textarea id="editor2" name="long_desc_bn" rows="10" cols="80">Long Description Bn</textarea>
                                     </div>
                                  </div>
                               </div> <!-- end col md 6 -->
