@@ -100,9 +100,6 @@ Route::group(
             Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add.product');
             Route::get('/manage-product', [ProductController::class, 'manageProduct'])->name('manage.product');
             Route::post('/create-product', [ProductController::class, 'createProduct'])->name('product.create');
-
-            // Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'getSubCategory']);
-
             // Route::post('/create-subsubcategory', [SubCategoryController::class, 'createSubSubCategory'])->name('create.subsubcategory');
             // Route::get('/edit-subsubcategory/{category_id}/{id}', [SubCategoryController::class, 'editSubSubCategory'])->name('edit.subsubcategory');
             // Route::post('/update-subsubcategory/{id}', [SubCategoryController::class, 'updateSubSubCategory'])->name('update.subsubcategory');
