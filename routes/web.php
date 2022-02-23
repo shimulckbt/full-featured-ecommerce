@@ -83,6 +83,7 @@ Route::group(
             Route::get('/all-subsubcategory', [SubCategoryController::class, 'allSubSubCategory'])->name('all.subsubcategory');
 
             Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'getSubCategory']);
+            Route::get('/sub-subcategory/ajax/{subcategory_id}', [SubCategoryController::class, 'getSubSubCategory']);
 
             Route::post('/create-subsubcategory', [SubCategoryController::class, 'createSubSubCategory'])->name('create.subsubcategory');
             Route::get('/edit-subsubcategory/{category_id}/{id}', [SubCategoryController::class, 'editSubSubCategory'])->name('edit.subsubcategory');
