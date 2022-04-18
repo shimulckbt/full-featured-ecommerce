@@ -26,7 +26,7 @@ class ProductController extends Controller
     {
         // dd($request->all());
         $request->validate([
-            'file' => 'required|mimes:jpeg,png,jpg,zip,pdf|max:2048',
+            'file' => 'mimes:jpeg,png,jpg,zip,pdf|max:2048',
         ]);
 
         if ($files = $request->file('file')) {
@@ -87,18 +87,7 @@ class ProductController extends Controller
         ////////// Multiple Image Upload Start ///////////
 
         $images = $request->file('multi_img');
-        foreach ($images as $img) {
-            $make_name = hexdec(uniqid()) . '.' . $img->getClientOriginalExtension();
-            Image::make($img)->resize(917, 1000)->save('upload/products/multi-image/' . $make_name);
-            $uploadPath = 'upload/products/multi-image/' . $make_name;
-
-            MultiImage::insert([
-
-                'product_id' => $product_id,
-                'photo_name' => $uploadPath,
-                'created_at' => Carbon::now(),
-
-            ]);
+        
         }
 
         ////////// Multiple Image Upload End ///////////
