@@ -280,66 +280,50 @@
                            </div> <!-- end 7th row  -->
                            <div class="row">
                               <!-- start 8th row  -->
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <h5>Long Description English <span class="text-danger">*</span></h5>
-                                    <div class="controls">
-                                       <textarea id="editor1" name="long_desc_en" rows="10" cols="80" required="">Long Description English</textarea>
-                                    </div>
-                                 </div>
-                              </div> <!-- end col md 6 -->
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <h5>Long Description Bn <span class="text-danger">*</span></h5>
-                                    <div class="controls">
-                                       <textarea id="editor2" name="long_desc_bn" rows="10" cols="80">Long Description Bn</textarea>
-                                    </div>
-                                 </div>
-                              </div> <!-- end col md 6 -->
-                           </div> <!-- end 8th row  -->
-                           <hr>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="controls">
-                                       <fieldset>
-                                          <input type="checkbox" id="checkbox_2" name="hot_deals" value="1">
-                                          <label for="checkbox_2">Hot Deals</label>
-                                       </fieldset>
-                                       <fieldset>
-                                          <input type="checkbox" id="checkbox_3" name="featured" value="1">
-                                          <label for="checkbox_3">Featured</label>
-                                       </fieldset>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="controls">
-                                       <fieldset>
-                                          <input type="checkbox" id="checkbox_4" name="special_offer" value="1">
-                                          <label for="checkbox_4">Special Offer</label>
-                                       </fieldset>
-                                       <fieldset>
-                                          <input type="checkbox" id="checkbox_5" name="special_deals" value="1">
-                                          <label for="checkbox_5">Special Deals</label>
-                                       </fieldset>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
 
-                              <div class="form-group">
-                                 <h5>Digital Product <span class="text-danger">pdf,xlx,csv*</span></h5>
-                                 <div class="controls">
-                                    <input type="file" name="file" class="form-control">
+                              <hr>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <div class="controls">
+                                          <fieldset>
+                                             <input type="checkbox" id="checkbox_2" name="hot_deals" value="1">
+                                             <label for="checkbox_2">Hot Deals</label>
+                                          </fieldset>
+                                          <fieldset>
+                                             <input type="checkbox" id="checkbox_3" name="featured" value="1">
+                                             <label for="checkbox_3">Featured</label>
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <div class="controls">
+                                          <fieldset>
+                                             <input type="checkbox" id="checkbox_4" name="special_offer" value="1">
+                                             <label for="checkbox_4">Special Offer</label>
+                                          </fieldset>
+                                          <fieldset>
+                                             <input type="checkbox" id="checkbox_5" name="special_deals" value="1">
+                                             <label for="checkbox_5">Special Deals</label>
+                                          </fieldset>
+                                       </div>
+                                    </div>
                                  </div>
                               </div>
-                           </div> <!-- end col md 4 -->
-                           <div class="text-xs-right">
-                              <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Add Product">
-                           </div>
+                              <div class="col-md-6">
+
+                                 <div class="form-group">
+                                    <h5>Digital Product <span class="text-danger">pdf,xlx,csv*</span></h5>
+                                    <div class="controls">
+                                       <input type="file" name="file" class="form-control">
+                                    </div>
+                                 </div>
+                              </div> <!-- end col md 4 -->
+                              <div class="text-xs-right">
+                                 <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Add Product">
+                              </div>
                   </form>
                </div>
                <!-- /.col -->
