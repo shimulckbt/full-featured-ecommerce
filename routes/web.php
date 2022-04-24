@@ -90,10 +90,10 @@ Route::group(
             Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add.product');
             Route::get('/manage-product', [ProductController::class, 'manageProduct'])->name('manage.product');
             Route::post('/create-product', [ProductController::class, 'createProduct'])->name('product.create');
-            // Route::post('/create-subsubcategory', [SubCategoryController::class, 'createSubSubCategory'])->name('create.subsubcategory');
-            // Route::get('/edit-subsubcategory/{category_id}/{id}', [SubCategoryController::class, 'editSubSubCategory'])->name('edit.subsubcategory');
-            // Route::post('/update-subsubcategory/{id}', [SubCategoryController::class, 'updateSubSubCategory'])->name('update.subsubcategory');
-            // Route::get('/delete-subsubcategory/{id}', [SubCategoryController::class, 'deleteSubSubCategory'])->name('delete.subsubcategory');
+            Route::post('/create-subsubcategory', [SubCategoryController::class, 'createSubSubCategory'])->name('create.subsubcategory');
+            Route::get('/edit-subsubcategory/{category_id}/{id}', [SubCategoryController::class, 'editSubSubCategory'])->name('edit.subsubcategory');
+            Route::post('/update-subsubcategory/{id}', [SubCategoryController::class, 'updateSubSubCategory'])->name('update.subsubcategory');
+            Route::get('/delete-subsubcategory/{id}', [SubCategoryController::class, 'deleteSubSubCategory'])->name('delete.subsubcategory');
         });
 
         ///////       Products related route ended        ///////
