@@ -19,7 +19,11 @@ class SubCategoryController extends Controller
 
     public function createSubCategory(Request $request)
     {
-
+        $request->validate([
+            'category_id' => 'required',
+            'subcategory_name_en' => 'required',
+            'subcategory_name_bn' => 'required',
+        ]);
 
         // $num = uniqid(3);
         $num = random_int(0, 100);
