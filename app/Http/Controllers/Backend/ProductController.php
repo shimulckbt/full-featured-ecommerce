@@ -104,7 +104,10 @@ class ProductController extends Controller
         ////////// Multiple Image Upload End ///////////
 
 
-
+        $notification = array(
+            'message' => 'Product Inserted Successfully',
+            'alert-type' => 'success'
+        );
 
         return redirect()->route('manage-product')->with($notification);
     }
