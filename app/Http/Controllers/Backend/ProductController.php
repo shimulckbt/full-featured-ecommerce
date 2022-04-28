@@ -49,6 +49,8 @@ class ProductController extends Controller
             'subsubcategory_id' => $request->subsubcategory_id,
             'product_name_en' => $request->product_name_en,
             'product_name_bn' => $request->product_name_bn,
+            'product_slug_en' =>  strtolower(str_replace(' ', '-', $request->product_name_en)),
+            'product_slug_bn' => str_replace(' ', '-', $request->product_name_bn),
             'product_code' => $request->product_code,
 
             'product_qty' => $request->product_qty,
