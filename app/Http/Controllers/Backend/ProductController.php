@@ -29,11 +29,7 @@ class ProductController extends Controller
             'file' => 'mimes:jpeg,png,jpg,zip,pdf|max:2048',
         ]);
 
-        if ($files = $request->file('file')) {
-            $destinationPath = 'upload/pdf'; // upload path
-            $digitalItem = date('YmdHis') . "." . $files->getClientOriginalExtension();
-            $files->move($destinationPath, $digitalItem);
-        }
+
 
 
 
