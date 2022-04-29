@@ -34,9 +34,6 @@ class ProductController extends Controller
             $digitalItem = date('YmdHis') . "." . $files->getClientOriginalExtension();
             $files->move($destinationPath, $digitalItem);
         }
-
-
-
         $image = $request->file('product_thumbnail');
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
         Image::make($image)->resize(917, 1000)->save('upload/products/thumbnail/' . $name_gen);
