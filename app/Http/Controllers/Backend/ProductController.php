@@ -25,7 +25,9 @@ class ProductController extends Controller
     public function createProduct(Request $request)
     {
         // dd($request->all());
-
+        $request->validate([
+            'file' => 'mimes:jpeg,png,jpg,zip,pdf|max:2048',
+        ]);
 
         if ($files = $request->file('file')) {
             $destinationPath = 'upload/pdf'; // upload path
